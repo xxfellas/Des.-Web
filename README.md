@@ -1,79 +1,38 @@
 # Plataforma de Planejamento de Viagens em Grupo
-Bem-vindo à Plataforma de Planejamento de Viagens em Grupo! Esta aplicação foi criada para ajudar grupos de amigos, familiares ou colegas de trabalho a organizarem todos os detalhes de uma viagem colaborativa, incluindo orçamento, roteiro, reservas e divisão de despesas.
+Bem-vindo ao Planejador Simplificado de Viagens em Grupo! Esta é uma aplicação leve para ajudar grupos de amigos, familiares ou colegas a organizarem uma viagem de forma simples e prática, com funcionalidades essenciais para planejamento colaborativo.
 # Proposta
-A Plataforma de Planejamento de Viagens em Grupo tem como objetivo simplificar o planejamento de viagens em grupo. Sabemos que organizar uma viagem com várias pessoas pode ser desafiador, com muitos detalhes para alinhar. Essa plataforma permite que os membros do grupo colaborem em tempo real, discutindo sugestões, dividindo responsabilidades e acompanhando o progresso do planejamento em um só lugar.
+O Planejador de Viagens em Grupo foi projetado para facilitar o planejamento de viagens em grupo com o mínimo de complexidade. Ele oferece uma interface onde os usuários podem criar um roteiro, definir orçamento e dividir despesas de forma básica, sem recursos adicionais que possam tornar o processo confuso.
 # Recursos Principais
-1 - Criação e Gerenciamento de Grupos de Viagem:
-  Usuários podem criar grupos de viagem e convidar outros membros para colaborar.
+1 - Criação de Viagem em Grupo:
+  - Usuários podem criar uma viagem e convidar membros para participarem do planejamento.
 
-2 - Planejamento Colaborativo de Roteiro:
-  Organize o roteiro diário da viagem, com sugestões de atividades e destinos. Membros podem votar nas atividades preferidas para facilitar a escolha.
+2 - Roteiro Básico:
+  - Possibilidade de criar um roteiro diário com atividades e destinos. Cada membro pode sugerir atividades e todos têm acesso ao roteiro.
 
-3 - Orçamento e Divisão de Despesas:
-  Calculadora de orçamento permite estimar os custos da viagem e dividir as despesas automaticamente entre os participantes.
+3 - Orçamento e Divisão de Custos:
+  - Uma calculadora simples de orçamento onde os custos da viagem podem ser adicionados e automaticamente divididos entre os membros.
 
-4 - Gerenciamento de Acomodações e Transportes:
-  Pesquisa de hotéis e passagens, com a possibilidade de fazer reservas diretamente pela plataforma.
-
-5 - Lista de Tarefas Compartilhada:
-  Ferramenta para distribuir tarefas entre os membros do grupo e monitorar o andamento de cada atividade necessária para a viagem.
-
-6 - Chat em Tempo Real:
-  Comunicação integrada para discussões e compartilhamento de links e ideias.
-
-7 - Mapas Personalizados:
-  Mapeamento dos pontos de interesse para uma visualização clara dos destinos planejados.
-
-8 - Divisão de Despesas Pós-Viagem:
-  Relatório de despesas com cálculo de reembolsos entre os membros após a viagem.
-
+4 - Lista de Tarefas para o Grupo:
+  - Lista de tarefas para ajudar na organização de responsabilidades, como reservar hotel, comprar ingressos, entre outras atividades importantes.
 # Público-Alvo
-A plataforma é ideal para:
+Esta aplicação é ideal para grupos que precisam de uma ferramenta simples para:
 
-  - Amigos que planejam viagens colaborativas.
-  - Famílias que querem organizar férias em conjunto.
-  - Colegas de trabalho que planejam viagens corporativas ou de incentivo.
-  - Qualquer grupo de pessoas que deseja organizar uma viagem de forma prática e organizada.
+  - Planejar viagens de fim de semana.
+  - Organizar escapadas de última hora.
+  - Planejar eventos de pequeno porte, como passeios ou viagens de família.
 
 # Tecnologias Utilizadas
-Para a criação deste projeto, as tecnologias e frameworks escolhidos são:
+Para manter o projeto leve e de fácil manutenção, utilizamos as seguintes tecnologias:
 
-  - Back-end: PHP puro para manipulação da lógica de negócios e comunicação com o banco de dados.
-  - Front-end: Utilização de um framework JavaScript moderno para a interface do usuário, como Vue.js ou React.
-  - Estilização: Bootstrap para a criação de uma interface responsiva e fácil de navegar.
-  - Banco de Dados: MySQL, para armazenar dados dos grupos de viagem, usuários, despesas e outras informações.
-  - Mapas e Geolocalização: Google Maps API, para visualização e criação de mapas personalizados com pontos de interesse.
+  - Back-end: PHP puro para gerenciar a criação de viagens, o roteiro e as despesas de forma centralizada.
+  - Front-end: Bootstrap para estilização básica e Vue.js para uma interface interativa e leve.
+  - Banco de Dados: MySQL para armazenar dados das viagens, usuários e despesas.
 
 # Dependências
-Certifique-se de que as seguintes dependências estão instaladas para o funcionamento correto da aplicação:
+Verifique se o ambiente possui as seguintes dependências instaladas:
 
   - PHP 7.4 ou superior.
-  - Servidor Apache ou Nginx para executar o PHP.
+  - Servidor Apache ou Nginx para rodar o PHP.
   - Banco de Dados MySQL.
-  - Node.js e npm para o gerenciamento das dependências de front-end.
-  - Bibliotecas front-end adicionais (opcionais, dependendo do framework escolhido):
-    - Bootstrap: Para estilos e componentes responsivos.
-    - Vue.js ou React: Para construção da interface dinâmica.
-    - Axios ou Fetch API: Para realizar requisições HTTP ao back-end.
-
-# Instalação e Configuração
-
-1 - Clonar o repositório: Clone este repositório em seu ambiente local.
-
-2 - Configuração do Back-end:
-    - Certifique-se de configurar corretamente o acesso ao banco de dados MySQL no arquivo de configuração do PHP.
-
-3 - Instalação das Dependências do Front-end:
-    - Execute npm install no diretório do front-end para instalar as dependências (caso esteja utilizando Vue.js ou React).
-
-4 - Configuração da API de Mapas:
-    - Para o recurso de geolocalização, configure a Google Maps API com uma chave de acesso válida e insira-a no arquivo de configuração do front-end.
-
-5 - Execução da Aplicação:
-    - Inicie o servidor PHP no diretório do back-end e abra a aplicação no navegador.
-
-6 - Login e Teste:
-    - Crie uma conta de usuário e comece a explorar as funcionalidades para verificar o funcionamento correto.
-
-# Contribuição
-Contribuições são bem-vindas! Caso tenha ideias para aprimorar o projeto ou identificar problemas, fique à vontade para abrir uma issue ou enviar um pull request.
+  - Node.js e npm para gerenciar dependências do front-end, caso necessário.
+  - Bootstrap e Vue.js: para uma interface intuitiva e responsiva.
