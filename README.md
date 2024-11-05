@@ -36,3 +36,7 @@ Verifique se o ambiente possui as seguintes dependências instaladas:
   - Banco de Dados MySQL.
   - Node.js e npm para gerenciar dependências do front-end, caso necessário.
   - Bootstrap e Vue.js: para uma interface intuitiva e responsiva.
+
+# Diagrama
+![Planejamento-de-Viagens drawio](https://github.com/user-attachments/assets/d54ce8ce-9c36-4b31-bead-3a7faf51f296)
+
