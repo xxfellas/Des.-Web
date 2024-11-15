@@ -38,3 +38,15 @@ Verifique se o ambiente possui as seguintes dependências instaladas:
 # Diagrama
 ![Planejamento-de-Viagens drawio](https://github.com/user-attachments/assets/d54ce8ce-9c36-4b31-bead-3a7faf51f296)
 
+#ROTAS
+$router->add('GET', '/trips', [$tripController, 'list']);
+$router->add('GET', '/trips/{id}', [$tripController, 'getById']);
+$router->add('POST', '/trips', [$tripController, 'create']);
+$router->add('DELETE', '/trips/{id}', [$tripController, 'delete']);
+$router->add('PUT', '/trips/{id}', [$tripController, 'update']);
+
+$router->add('GET', '/expenses', [$expenseController, 'list']);
+$router->add('GET', '/expenses/{id}', [$expenseController, 'getById']);
+$router->add('POST', '/expenses', [$expenseController, 'create']);
+$router->add('DELETE', '/expenses/{id}', [$expenseController, 'delete']);
+$router->add('PUT', '/expenses/{id}', [$expenseController, 'update']);
