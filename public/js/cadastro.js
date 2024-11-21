@@ -23,31 +23,26 @@ iconClose.addEventListener('click', ()=> {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona o botão Entrar
     const btnEntrar = document.querySelector(".btnEntrar");
 
-    btnEntrar.addEventListener("click", function (event) {
-        event.preventDefault();
+    if (btnEntrar) {
+        btnEntrar.addEventListener("click", function (event) {
+            event.preventDefault(); // Impede o envio do formulário
 
-        const email = document.querySelector('input[type="email"]').value;
-        const password = document.querySelector('input[type="password"]').value;
+            // Seleciona os campos de email e senha
+            const email = document.querySelector('input[type="email"]').value;
+            const password = document.querySelector('input[type="password"]').value;
 
-        fetch('Router.php?action=login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email, password }),
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = "index.html"; // Redireciona para a página inicial
-                } else {
-                    alert(data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-    });
+            // Simula validação simples (ajuste conforme sua lógica)
+            if (email && password) {
+                // Redireciona para index.html
+                window.location.href = "./index.html";
+            } else {
+                alert("Por favor, preencha o email e a senha.");
+            }
+        });
+    } else {
+        console.error("Botão 'Entrar' não encontrado.");
+    }
 });
