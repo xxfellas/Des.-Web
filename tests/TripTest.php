@@ -2,7 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use App\Models\Trip;
-colors: true;
+
 
 class TripTest extends TestCase
 {

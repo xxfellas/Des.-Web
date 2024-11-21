@@ -38,6 +38,6 @@ class Trip {
         $db = new Databases(); 
         $db = $db->getConnection();
         $stmt = $db->prepare("DELETE FROM trips WHERE id = ?");
-        $stmt->execute([$this->id]);
+        $stmt->execute([$this->$id]);
     }
 }
