@@ -1,0 +1,1 @@
+{"version":1,"defects":{"ExpenseTest::testExpenseCreation":8,"TripTest::testTripCreation":8,"TripTest::testAddingExpenseToTrip":8},"times":{"ExpenseTest::testExpenseCreation":0.005,"TripTest::testTripCreation":0.014,"TripTest::testAddingExpenseToTrip":0}}

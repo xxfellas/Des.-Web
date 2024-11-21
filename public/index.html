@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Viagem e Despesas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Cadastro de Viagem e Despesas</h1>
+    
+    <!-- Formulário de Cadastro de Viagem -->
+    <section id="cadastro-viagem" class="my-5">
+      <h2>Cadastrar Nova Viagem</h2>
+      <form id="formViagem">
+        <div class="mb-3">
+          <label for="nomeViagem" class="form-label">Nome da Viagem:</label>
+          <input type="text" class="form-control" id="nomeViagem" placeholder="Ex: Viagem a Paris" required>
+        </div>
+        <div class="mb-3">
+          <label for="destino" class="form-label">Destino:</label>
+          <input type="text" class="form-control" id="destino" placeholder="Ex: Paris, França" required>
+        </div>
+        <div class="mb-3">
+          <label for="dataInicio" class="form-label">Data de Início:</label>
+          <input type="date" class="form-control" id="dataInicio" required>
+        </div>
+        <div class="mb-3">
+          <label for="dataFim" class="form-label">Data de Fim:</label>
+          <input type="date" class="form-control" id="dataFim" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar Viagem</button>
+      </form>
+    </section>
+
+    <!-- Listagem de Viagens -->
+    <section id="lista-viagens" class="my-5">
+      <h2>Lista de Viagens</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Destino</th>
+            <th scope="col">Data Início</th>
+            <th scope="col">Data Fim</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaViagens">
+          <!-- As viagens cadastradas serão inseridas aqui -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulário de Cadastro de Despesa -->
+    <section id="cadastro-despesa" class="my-5">
+      <h2>Cadastrar Despesa</h2>
+      <form id="formDespesa">
+        <div class="mb-3">
+          <label for="viagem" class="form-label">Viagem:</label>
+          <select id="viagem" class="form-select" required>
+            <option selected>Escolha uma viagem</option>
+            <!-- Opções serão populadas dinamicamente -->
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="categoria" class="form-label">Categoria:</label>
+          <input type="text" class="form-control" id="categoria" placeholder="Ex: Transporte, Alimentação" required>
+        </div>
+        <div class="mb-3">
+          <label for="valor" class="form-label">Valor:</label>
+          <input type="number" step="0.01" class="form-control" id="valor" placeholder="Ex: 200.00" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Cadastrar Despesa</button>
+      </form>
+    </section>
+
+    <!-- Listagem de Despesas -->
+    <section id="lista-despesas" class="my-5">
+      <h2>Lista de Despesas</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Viagem</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaDespesas">
+          <!-- As despesas cadastradas serão inseridas aqui -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

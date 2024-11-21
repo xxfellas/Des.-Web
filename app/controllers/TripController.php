@@ -8,14 +8,26 @@ class TripController
 
     public function list()
     {
-        $trips = $this->trip->findAll();
+        // Cria uma conexão com o banco de dados usando a configuração definida
+        $db = new \App\Config\Databases();
+        $connection = $db->getConnection();
+        
+        // Prepara a consulta para buscar todos os dados da tabela 'trips'
+        $stmt = $connection->prepare("SELECT * FROM trips");
+        $stmt->execute();
+        
+        // Extrai os dados como array associativo
+        $trips = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        
+        // Retorna os dados em formato JSON
         echo json_encode($trips);
     }
+    
 
     public function create()
     {
-        $data = json_decode(file_get_contents("php://input"));
-        if (isset($data->name) && isset($data->start_date) && isset($data->end_date) && isset($data->location)) {
+        $data = json_decode(file_get_contents(filename: "php://input"), true);
+        if (isset($data['name']) && isset($data['start_date']) && isset($data['end_date']) && isset($data['location'])) {
             try {
                 $this->trip->save($data->name, $data->start_date, $data->end_date, $data->location);
 
